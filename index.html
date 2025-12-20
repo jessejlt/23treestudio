@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23 Tree Studio | Watercolor & Whimsy</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paper: '#FAFAF8',
+                        charcoal: '#4A4A4A',
+                        gold: '#D4AF37',
+                        'pastel-pink': '#F2E6E6',
+                        'pastel-sage': '#DDE4DD',
+                        'pastel-blue': '#E0E7EB',
+                        'pastel-yellow': '#F9F3D8',
+                        'swatch-rose': '#E8B4B8',
+                        'swatch-green': '#A8C3A8',
+                        'swatch-blue': '#A3C4D6',
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'paper-texture': "url('https://www.transparenttextures.com/patterns/cream-paper.png')",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Watercolor Paper Texture Overlay for whole body */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://www.transparenttextures.com/patterns/watercolor.png");
+            opacity: 0.5;
+            pointer-events: none;
+            z-index: 50;
+            mix-blend-mode: multiply;
+        }
+
+        /* The Organic Watercolor Droplet Shape */
+        .swatch-blob {
+            border-radius: 45% 55% 70% 30% / 30% 60% 40% 70%;
+            transition: all 0.5s ease-in-out;
+            animation: float 6s ease-in-out infinite;
+            
+            /* The Watercolor Texture Effect */
+            background-image: url('https://www.transparenttextures.com/patterns/watercolor.png'); 
+            background-size: 150px;
+            
+            /* This blend mode makes it look like ink on paper */
+            mix-blend-mode: multiply; 
+            
+            /* Inner shadow simulates the "coffee ring" effect of drying watercolor */
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.1), inset 2px 2px 5px rgba(255,255,255,0.4);
+            
+            /* Ensure the image sits nicely on top */
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Ensure content inside doesn't get blended weirdly if we don't want it to */
+        .swatch-blob img {
+            mix-blend-mode: normal;
+        }
+
+        .swatch-blob:hover {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            transform: scale(1.05);
+            /* Slightly darken on hover */
+            filter: brightness(0.95);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Soft Gold Accents */
+        .gold-shimmer {
+            background: linear-gradient(120deg, #D4AF37 0%, #F3E5AB 50%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: shimmer 4s linear infinite;
+        }
+
+        @keyframes shimmer {
+            to { background-position: 200% center; }
+        }
+
+        /* Navigation Hover Line */
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: #D4AF37;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Tiny Landscape Frame Logic */
+        .wool-mount {
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-paper text-charcoal font-sans antialiased bg-paper-texture">
+
+    <!-- Announcement Bar -->
+    <div class="bg-pastel-sage/50 text-charcoal text-[10px] md:text-xs py-2 text-center tracking-widest uppercase font-medium">
+        <span><i class="fa-solid fa-heart text-white mr-2"></i> Making Art Accessible for Everyone</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-40 bg-paper/90 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <!-- Logo -->
+            <a href="#" class="text-center md:text-left group">
+                <h1 class="font-serif text-3xl md:text-4xl text-charcoal tracking-wide group-hover:text-swatch-rose transition-colors">23 Tree Studio</h1>
+            </a>
+
+            <!-- Menu -->
+            <div class="flex flex-wrap justify-center gap-8 text-xs font-medium tracking-widest uppercase text-charcoal/80">
+                <a href="#about" class="nav-link hover:text-charcoal">About</a>
+                <a href="#swatches" class="nav-link hover:text-charcoal">Shop</a>
+                <a href="#gallery" class="nav-link hover:text-charcoal">Gallery</a>
+                <a href="#visit" class="nav-link hover:text-charcoal">Visit</a>
+                <a href="#contact" class="px-5 py-2 border border-charcoal/20 rounded-full hover:bg-pastel-pink transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative py-20 md:py-32 px-6 overflow-hidden">
+        <!-- Background Paint Blobs (Decorative) -->
+        <!-- Updated to use the swatch-blob class for consistency but softer opacity -->
+        <div class="absolute top-10 left-10 w-64 h-64 bg-pastel-pink/60 rounded-full blur-3xl -z-10 animate-pulse mix-blend-multiply"></div>
+        <div class="absolute bottom-20 right-10 w-80 h-80 bg-pastel-blue/60 rounded-full blur-3xl -z-10 mix-blend-multiply"></div>
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pastel-yellow/50 rounded-full blur-3xl -z-10 mix-blend-multiply"></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <p class="font-serif italic text-xl md:text-2xl text-charcoal/60 mb-4">Welcome to our creative haven</p>
+            <h2 class="font-serif text-5xl md:text-7xl lg:text-8xl mb-6 text-charcoal leading-none">
+                Dreamy <span class="gold-shimmer">Colors.</span> <br>
+                Tiny Landscapes.
+            </h2>
+            <p class="font-sans font-light text-charcoal/80 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+                Nestled in Castle Rock, CO. We believe that with the right tools and a little encouragement, anyone can create something beautiful.
+            </p>
+            
+            <div class="flex justify-center gap-4">
+                <a href="#swatches" class="bg-charcoal text-white px-8 py-4 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-swatch-rose hover:text-white transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+                    Start Browsing
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- The Paint Swatch Navigation (Categories) -->
+    <section id="swatches" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="font-serif text-3xl italic text-charcoal">Curated for your creativity</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+                
+                <!-- Category 1: Originals -->
+                <div class="flex flex-col items-center group cursor-pointer">
+                    <!-- The Swatch Shape -->
+                    <!-- I increased opacity from /20 to /50 to make the watercolor texture visible -->
+                    <div class="w-64 h-64 swatch-blob bg-swatch-rose/50 relative flex items-center justify-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1579783902614-a3fb39279c23?q=80&w=400&auto=format&fit=crop" alt="Original Art" class="w-40 h-40 object-cover rounded-full shadow-md group-hover:scale-110 transition-transform duration-500 border-2 border-white/50">
+                    </div>
+                    <h4 class="font-serif text-2xl mb-2 group-hover:text-swatch-rose transition-colors">Original Artwork</h4>
+                    <p class="text-center text-sm font-light text-charcoal/70 px-8">Tiny landscapes on wool & wood with gold leaf.</p>
+                </div>
+
+                <!-- Category 2: Supplies -->
+                <div class="flex flex-col items-center group cursor-pointer">
+                    <div class="w-64 h-64 swatch-blob bg-swatch-green/50 relative flex items-center justify-center mb-6" style="animation-delay: 1s;">
+                        <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=400&auto=format&fit=crop" alt="Supplies" class="w-40 h-40 object-cover rounded-full shadow-md group-hover:scale-110 transition-transform duration-500 border-2 border-white/50">
+                    </div>
+                    <h4 class="font-serif text-2xl mb-2 group-hover:text-swatch-green transition-colors">Supplies & Workbooks</h4>
+                    <p class="text-center text-sm font-light text-charcoal/70 px-8">Watercolor palettes, brushes, and guides for beginners.</p>
+                </div>
+
+                <!-- Category 3: Gifts -->
+                <div class="flex flex-col items-center group cursor-pointer">
+                    <div class="w-64 h-64 swatch-blob bg-swatch-blue/50 relative flex items-center justify-center mb-6" style="animation-delay: 2s;">
+                        <img src="https://images.unsplash.com/photo-1544860707-c352cc5a92e3?q=80&w=400&auto=format&fit=crop" alt="Gifts" class="w-40 h-40 object-cover rounded-full shadow-md group-hover:scale-110 transition-transform duration-500 border-2 border-white/50">
+                    </div>
+                    <h4 class="font-serif text-2xl mb-2 group-hover:text-swatch-blue transition-colors">Prints & Gifts</h4>
+                    <p class="text-center text-sm font-light text-charcoal/70 px-8">Regional art and thoughtful items that spark joy.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-pastel-sage/10">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
+            <div class="w-full md:w-1/2 relative">
+                <!-- Image Stack -->
+                <div class="relative z-10 p-2 bg-white shadow-xl rotate-2 rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop" alt="Meredith" class="w-full h-auto rounded">
+                </div>
+                <div class="absolute top-0 left-0 w-full h-full border-2 border-charcoal/10 -rotate-2 rounded-lg z-0"></div>
+            </div>
+            
+            <div class="w-full md:w-1/2">
+                <h2 class="font-serif text-4xl md:text-5xl mb-6">Hello, I'm Meredith.</h2>
+                <div class="h-1 w-20 bg-swatch-rose mb-8 rounded-full mix-blend-multiply"></div>
+                <p class="font-sans font-light text-lg mb-6 leading-relaxed">
+                    I founded 23 Tree Studio because I truly believe <span class="font-medium">anyone can paint</span>. 
+                </p>
+                <p class="font-sans font-light text-charcoal/80 mb-6 leading-relaxed">
+                    My artwork is deeply inspired by the stunning local scenery and colors of Colorado. Using acrylics, 23K gold leaf, hand-dyed wools, and raw canvas, I pour my impressionist style into each piece, creating a soothing vibe that feels like home.
+                </p>
+                <p class="font-serif italic text-xl text-charcoal/60">
+                    "My goal is to leave you feeling uplifted and inspired every time you visit."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tiny Landscape Gallery -->
+    <section id="gallery" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-12 border-b border-charcoal/10 pb-4">
+                <h2 class="font-serif text-4xl">From the Easel</h2>
+                <a href="#" class="text-xs font-bold uppercase tracking-widest hover:text-swatch-rose transition-colors">View All</a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Gallery Item 1 -->
+                <div class="group">
+                    <div class="bg-white p-3 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="bg-stone-200 p-4 wool-mount relative">
+                            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop" class="w-full aspect-square object-cover shadow border-2 border-gold/40">
+                            <!-- Gold Leaf Detail -->
+                            <div class="absolute bottom-6 right-6 w-4 h-4 bg-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity animate-pulse shadow-[0_0_10px_#D4AF37]"></div>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <h4 class="font-serif text-lg">Maroon Bells</h4>
+                        <p class="text-xs text-charcoal/50 uppercase tracking-widest">Available on Faire</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="group">
+                    <div class="bg-white p-3 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="bg-slate-700 p-4 wool-mount relative">
+                            <img src="https://images.unsplash.com/photo-1548588627-f978862b85e1?q=80&w=600&auto=format&fit=crop" class="w-full aspect-square object-cover shadow border-2 border-gold/40">
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <h4 class="font-serif text-lg">Garden of the Gods</h4>
+                        <p class="text-xs text-charcoal/50 uppercase tracking-widest">Available on Faire</p>
+                    </div>
+                </div>
+
+                 <!-- Gallery Item 3 -->
+                 <div class="group">
+                    <div class="bg-white p-3 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="bg-emerald-900 p-4 wool-mount relative">
+                            <img src="https://images.unsplash.com/photo-1518098268026-4e1877433665?q=80&w=600&auto=format&fit=crop" class="w-full aspect-square object-cover shadow border-2 border-gold/40">
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <h4 class="font-serif text-lg">Aspen Gold</h4>
+                        <p class="text-xs text-charcoal/50 uppercase tracking-widest">Available on Faire</p>
+                    </div>
+                </div>
+
+                 <!-- Gallery Item 4 -->
+                 <div class="group">
+                    <div class="bg-white p-3 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="bg-orange-100 p-4 wool-mount relative">
+                            <img src="https://images.unsplash.com/photo-1470770903676-69b98201ea1c?q=80&w=600&auto=format&fit=crop" class="w-full aspect-square object-cover shadow border-2 border-gold/40">
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                        <h4 class="font-serif text-lg">Morning Haze</h4>
+                        <p class="text-xs text-charcoal/50 uppercase tracking-widest">Available on Faire</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Visit & Contact -->
+    <section id="visit" class="bg-pastel-blue/20 py-24 relative overflow-hidden">
+        <!-- More floating blobs -->
+        <div class="absolute -right-20 top-10 w-96 h-96 bg-white/40 rounded-full blur-3xl mix-blend-multiply"></div>
+
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 class="font-serif text-4xl mb-6">Visit The Studio</h2>
+            <p class="mb-10 text-charcoal/70 leading-relaxed">
+                Come browse our selection of watercolors, workbooks, and originals.<br>
+                Located inside <strong>The Emporium</strong> in Castle Rock.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-6 text-sm mb-12">
+                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                    <i class="fa-solid fa-location-dot text-swatch-rose text-2xl mb-3"></i>
+                    <p class="font-bold">Address</p>
+                    <p class="text-gray-500">200 Perry St<br>Castle Rock, CO 80104</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                    <i class="fa-regular fa-clock text-swatch-green text-2xl mb-3"></i>
+                    <p class="font-bold">Hours</p>
+                    <p class="text-gray-500">Daily<br>10am - 6pm</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm">
+                    <i class="fa-regular fa-paper-plane text-swatch-blue text-2xl mb-3"></i>
+                    <p class="font-bold">Contact</p>
+                    <p class="text-gray-500">hello@23treestudio.com<br>@23TreeStudio</p>
+                </div>
+            </div>
+
+            <h3 class="font-serif text-2xl mb-6">Send a Note</h3>
+            
+            <!-- Updated Form for Netlify -->
+            <form class="max-w-md mx-auto space-y-4" name="contact" method="POST" data-netlify="true">
+                <!-- Hidden input required by Netlify -->
+                <input type="hidden" name="form-name" value="contact">
+                
+                <input type="text" name="name" placeholder="Your Name" class="w-full p-4 rounded-xl border border-transparent bg-white focus:outline-none focus:ring-2 focus:ring-swatch-blue/50 transition-all" required>
+                <input type="email" name="email" placeholder="Your Email" class="w-full p-4 rounded-xl border border-transparent bg-white focus:outline-none focus:ring-2 focus:ring-swatch-blue/50 transition-all" required>
+                <textarea name="message" rows="4" placeholder="How can we help?" class="w-full p-4 rounded-xl border border-transparent bg-white focus:outline-none focus:ring-2 focus:ring-swatch-blue/50 transition-all" required></textarea>
+                
+                <button type="submit" class="w-full py-4 bg-charcoal text-white font-bold uppercase tracking-widest rounded-xl hover:bg-swatch-rose transition-colors">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Swatch Footer Strip -->
+    <div class="flex h-4 w-full">
+        <div class="flex-1 bg-swatch-rose mix-blend-multiply"></div>
+        <div class="flex-1 bg-swatch-green mix-blend-multiply"></div>
+        <div class="flex-1 bg-swatch-blue mix-blend-multiply"></div>
+        <div class="flex-1 bg-pastel-yellow mix-blend-multiply"></div>
+        <div class="flex-1 bg-pastel-pink mix-blend-multiply"></div>
+    </div>
+
+    <footer class="bg-white py-12 text-center text-xs text-charcoal/40 uppercase tracking-widest">
+        <p>&copy; 2024 23 Tree Studio. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
