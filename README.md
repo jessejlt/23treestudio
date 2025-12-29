@@ -1,0 +1,2 @@
+- Domain by Squarespace
+- Hosted on Netlify
