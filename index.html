@@ -264,12 +264,18 @@
                     </div>
                 </div>
 
-                <!-- Right: Hero image -->
-                <div class="fade-in-up delay-200 relative h-[520px] md:h-[620px]">
-                    <!-- Main image -->
+                <!-- Right: Hero video reel -->
+                <div class="fade-in-up delay-200 relative aspect-[4/5] md:aspect-auto md:h-[620px]">
+                    <!-- Main media -->
                     <div class="absolute top-0 right-0 w-[92%] h-full organic-corners overflow-hidden shadow-2xl rotate-1">
-                        <img src="assets/ski-town-shimmer-swatch-grid.jpg" alt="Ski Town Shimmer metallic watercolor set with hand-painted shimmer swatches in mountain blues, golds, and greens"
-                            class="w-full h-full object-cover ken-burns">
+                        <video autoplay muted loop playsinline preload="metadata"
+                            poster="assets/hero-reel-poster.jpg"
+                            aria-label="Summer collection reel — new 23 Tree Studio palettes, brushes, and watercolor clutches"
+                            class="w-full h-full object-cover">
+                            <source src="assets/hero-reel.mp4" type="video/mp4">
+                            <img src="assets/ski-town-shimmer-swatch-grid.jpg" alt="Ski Town Shimmer metallic watercolor set with hand-painted shimmer swatches in mountain blues, golds, and greens"
+                                class="w-full h-full object-cover ken-burns">
+                        </video>
                     </div>
                     <!-- Accent badge — visit the studio -->
                     <a href="#visit"
