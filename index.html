@@ -100,6 +100,30 @@
             animation: gentleFloat 13s ease-in-out infinite;
         }
 
+        /* Hero photo carousel — crossfading product slides */
+        .hero-carousel .slide {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            animation: heroSlideFade 20s ease-in-out infinite;
+        }
+        .hero-carousel .slide:nth-child(1) { animation-delay: 0s; }
+        .hero-carousel .slide:nth-child(2) { animation-delay: 4s; }
+        .hero-carousel .slide:nth-child(3) { animation-delay: 8s; }
+        .hero-carousel .slide:nth-child(4) { animation-delay: 12s; }
+        .hero-carousel .slide:nth-child(5) { animation-delay: 16s; }
+
+        @keyframes heroSlideFade {
+            0% { opacity: 0; }
+            4% { opacity: 1; }
+            20% { opacity: 1; }
+            26% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
         /* Handmade asymmetric corners */
         .organic-corners {
             border-radius: 2rem 0.5rem 2rem 0.5rem;
@@ -167,6 +191,8 @@
             .reveal { opacity: 1; transform: none; transition: none; }
             .fade-in-up { animation: none; opacity: 1; transform: none; }
             .float-slow, .float-slower, .marquee-track, .ken-burns, .spin-slow { animation: none; }
+            .hero-carousel .slide { animation: none; }
+            .hero-carousel .slide:first-child { opacity: 1; }
         }
     </style>
 </head>
@@ -264,18 +290,20 @@
                     </div>
                 </div>
 
-                <!-- Right: Hero video reel -->
+                <!-- Right: Hero photo carousel -->
                 <div class="fade-in-up delay-200 relative aspect-[4/5] md:aspect-auto md:h-[620px]">
                     <!-- Main media -->
-                    <div class="absolute top-0 right-0 w-[92%] h-full organic-corners overflow-hidden shadow-2xl rotate-1">
-                        <video autoplay muted loop playsinline preload="metadata"
-                            poster="assets/hero-reel-poster.jpg"
-                            aria-label="Summer collection reel — new 23 Tree Studio palettes, brushes, and watercolor clutches"
-                            class="w-full h-full object-cover">
-                            <source src="assets/hero-reel.mp4" type="video/mp4">
-                            <img src="assets/ski-town-shimmer-swatch-grid.jpg" alt="Ski Town Shimmer metallic watercolor set with hand-painted shimmer swatches in mountain blues, golds, and greens"
-                                class="w-full h-full object-cover ken-burns">
-                        </video>
+                    <div class="hero-carousel absolute top-0 right-0 w-[92%] h-full organic-corners overflow-hidden shadow-2xl rotate-1">
+                        <img class="slide" src="assets/colorado-24-swatch-card.jpg"
+                            alt="The Colorado 24 hand-painted swatch card beside the open tin">
+                        <img class="slide" src="assets/kaden-open-angle.jpg"
+                            alt="Kaden 9-color travel watercolor palette fully open with swatch card and mixing trays">
+                        <img class="slide" src="assets/ski-town-shimmer-pans.jpg"
+                            alt="Ski Town Shimmer — 12 metallic watercolor pans in the open travel case">
+                        <img class="slide" src="assets/telluride-gift-set-hero.jpg"
+                            alt="Telluride 25 wildflower shimmer gift set — navy box, plaid compact, and travel brush">
+                        <img class="slide" src="assets/juliette-clutch-open.jpg"
+                            alt="Juliette watercolor clutch in blue gingham, open with paints and brushes">
                     </div>
                     <!-- Accent badge — visit the studio -->
                     <a href="#visit"
