@@ -11,39 +11,50 @@
             theme: {
                 extend: {
                     colors: {
-                        payne: {
-                            50: '#f1f3f5', 100: '#dce2e7', 200: '#b8c3cd', 300: '#8ea0ae',
-                            400: '#677e90', 500: '#536878', 600: '#435461', 700: '#38454f',
-                            800: '#2e3840', 900: '#252d34',
+                        /* Brand: gold #D09F4F, navy #162C45, cream #F6F1E7. Scales are tints/shades of those three. */
+                        payne: { /* navy */
+                            50: '#EEF1F5', 100: '#D9E0E9', 200: '#B4C1D2', 300: '#8A9DB6',
+                            400: '#607B9A', 500: '#3F5B7C', 600: '#2C4562', 700: '#21374F',
+                            800: '#162C45', 900: '#0F1E30',
                         },
-                        blush: {
-                            50: '#faf1ee', 100: '#f1ddd5', 200: '#e3bcac', 300: '#d19680',
-                            400: '#bc7560', 500: '#a35b46', 600: '#874a3a', 700: '#6e3e30',
-                            800: '#5a342a', 900: '#4a2c24',
+                        blush: { /* cream */
+                            50: '#FBF8F1', 100: '#F6F1E7', 200: '#EFE6D4', 300: '#E3D6BC',
+                            400: '#D4C3A1', 500: '#C2AC84', 600: '#A8926B', 700: '#8A7656',
+                            800: '#6E5D44', 900: '#574A37',
                         },
-                        olive: {
-                            50: '#f5f5eb', 100: '#e7e9cc', 200: '#d0d39a', 300: '#b4ba6d',
-                            400: '#99a14e', 500: '#7d843b', 600: '#626830', 700: '#4e5229',
-                            800: '#3e4223', 900: '#343620',
+                        olive: { /* gold (label accent) */
+                            50: '#FBF6EC', 100: '#F5E9D2', 200: '#EBD3A6', 300: '#E0BD7B',
+                            400: '#D8AE65', 500: '#D09F4F', 600: '#B98A3F', 700: '#9A7133',
+                            800: '#7A5928', 900: '#5C431E',
                         },
                         gold: {
-                            50: '#faf3de', 100: '#f0e0b0', 200: '#e1c577', 300: '#cfa747',
-                            400: '#bd912e', 500: '#a27624', 600: '#825d1e', 700: '#66491c',
-                            800: '#533c1a', 900: '#443218',
+                            50: '#FBF6EC', 100: '#F5E9D2', 200: '#EBD3A6', 300: '#E0BD7B',
+                            400: '#D8AE65', 500: '#D09F4F', 600: '#B98A3F', 700: '#9A7133',
+                            800: '#7A5928', 900: '#5C431E',
                         },
+                        gray: { /* warm neutrals that resolve to navy at the dark end */
+                            50: '#F3F1EC', 100: '#E8E4DB', 200: '#D5D0C5', 300: '#B7B3AA',
+                            400: '#8C8E96', 500: '#5F6B7D', 600: '#46536A', 700: '#2F3F58',
+                            800: '#162C45', 900: '#0F1E30',
+                        },
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['Montserrat', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+                    },
                     }
                 }
             }
         }
     </script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;700&display=swap"
         rel="stylesheet">
     <style>
         body {
-            font-family: 'Lato', sans-serif;
-            color: #5d5d5d;
-            background-color: #faf8f3;
+            font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+            color: #162C45;
+            background-color: #F6F1E7;
         }
 
         h1,
@@ -51,7 +62,7 @@
         h3,
         h4,
         h5 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', Georgia, serif;
         }
 
         /* Subtle Paper Grain Texture */
@@ -203,24 +214,24 @@
     <div class="paper-grain"></div>
 
     <!-- NAVIGATION -->
-    <nav class="sticky top-0 z-50 bg-[#faf8f3]/95 backdrop-blur-sm border-b border-gray-200/50 transition-all duration-300">
+    <nav class="sticky top-0 z-50 bg-[#F6F1E7]/95 backdrop-blur-sm border-b border-gray-200/50 transition-all duration-300">
         <div class="container mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center">
             <a href="#"
-                class="text-2xl font-semibold tracking-widest uppercase text-gray-800 hover:text-olive-700 transition mb-4 md:mb-0 font-serif italic">
+                class="text-3xl font-serif italic font-semibold text-gold-500 hover:text-gold-600 transition mb-4 md:mb-0 whitespace-nowrap shrink-0 md:mr-10">
                 23 Tree Studio
             </a>
-            <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-2 text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400">
-                <a href="our-story.html" class="hover:text-black transition duration-300">Our Story</a>
-                <a href="#originals" class="hover:text-black transition duration-300">Originals</a>
-                <a href="#in-store" class="hover:text-black transition duration-300">In-Store</a>
-                <a href="#swatches" class="hover:text-black transition duration-300">Collections</a>
+            <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-2 text-[11px] font-bold uppercase tracking-[0.19em] text-gray-400">
+                <a href="our-story.html" class="hover:text-gray-900 transition duration-300">Our Story</a>
+                <a href="#originals" class="hover:text-gray-900 transition duration-300">Originals</a>
+                <a href="#in-store" class="hover:text-gray-900 transition duration-300">In-Store</a>
+                <a href="#swatches" class="hover:text-gray-900 transition duration-300">Collections</a>
                 <a href="#connect" class="hover:text-payne-600 transition duration-300">Socials</a>
-                <a href="#visit" class="hover:text-black transition duration-300">Visit</a>
+                <a href="#visit" class="hover:text-gray-900 transition duration-300">Visit</a>
                 <a href="#wholesale" class="text-gold-600 hover:text-gold-700 transition duration-300">Wholesale</a>
                 <a href="https://shop.23treestudio.com" target="_blank"
-                    class="hover:text-black transition duration-300">Shop Retail</a>
+                    class="hover:text-gray-900 transition duration-300">Shop Retail</a>
                 <a href="https://www.faire.com/direct/23treestudio" target="_blank"
-                    class="inline-flex items-center gap-2 bg-gold-600 text-white px-4 py-2 rounded-full hover:bg-gold-700 hover:shadow-md transition duration-300 tracking-[0.15em]">
+                    class="inline-flex items-center gap-2 bg-gold-500 text-gray-900 px-4 py-2 rounded-full hover:bg-gold-600 hover:shadow-md transition duration-300 tracking-[0.19em]">
                     Wholesale on Faire
                     <span aria-hidden="true">→</span>
                 </a>
@@ -247,7 +258,7 @@
 
                 <!-- Left: Text -->
                 <div class="text-center md:text-left">
-                    <p class="fade-in-up text-[11px] uppercase tracking-[0.35em] text-olive-700 font-bold mb-6">
+                    <p class="fade-in-up text-[11px] uppercase tracking-[0.19em] text-gold-500 font-bold mb-6">
                         Create Something Beautiful — Est. Castle Rock, CO
                     </p>
 
@@ -266,18 +277,18 @@
 
                     <div class="fade-in-up delay-300 flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center">
                         <a href="#visit"
-                            class="inline-flex items-center gap-3 bg-gray-900 text-white text-[11px] uppercase tracking-[0.25em] font-bold py-5 px-10 rounded-full hover:bg-payne-800 hover:shadow-xl transition duration-300 ease-out transform hover:-translate-y-1">
+                            class="inline-flex items-center gap-3 bg-gray-900 text-white text-[11px] uppercase tracking-[0.19em] font-bold py-5 px-10 rounded-full hover:bg-payne-800 hover:shadow-xl transition duration-300 ease-out transform hover:-translate-y-1">
                             Visit the Studio
                             <span aria-hidden="true" class="text-base">→</span>
                         </a>
                         <a href="https://shop.23treestudio.com" target="_blank"
-                            class="inline-block text-[11px] uppercase tracking-[0.25em] font-bold text-gray-700 py-5 px-4 border-b-2 border-gray-300 hover:border-gray-900 hover:text-gray-900 transition">
+                            class="inline-block text-[11px] uppercase tracking-[0.19em] font-bold text-gray-700 py-5 px-4 border-b-2 border-gray-300 hover:border-gray-900 hover:text-gray-900 transition">
                             Shop Online
                         </a>
                     </div>
 
                     <!-- Trust row -->
-                    <div class="fade-in-up delay-400 flex flex-wrap gap-x-8 gap-y-2 justify-center md:justify-start mt-12 text-xs uppercase tracking-[0.2em] text-gray-400">
+                    <div class="fade-in-up delay-400 flex flex-wrap gap-x-8 gap-y-2 justify-center md:justify-start mt-12 text-xs uppercase tracking-[0.19em] text-gray-400">
                         <span class="flex items-center gap-2">
                             <span class="w-1.5 h-1.5 rounded-full bg-gold-500"></span> Original artwork
                         </span>
@@ -312,7 +323,7 @@
                             <defs>
                                 <path id="badgeCircle" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
                             </defs>
-                            <text class="fill-current" style="font-size: 11.5px; font-family: 'Lato', sans-serif; font-weight: 700; letter-spacing: 2.5px;">
+                            <text class="fill-current" style="font-size: 11.5px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 0.19em;">
                                 <textPath href="#badgeCircle">CASTLE ROCK ✦ COLORADO ✦</textPath>
                             </text>
                         </svg>
@@ -325,9 +336,9 @@
     </section>
 
     <!-- MARQUEE TICKER -->
-    <div class="bg-gray-900 text-[#faf8f3] py-5 overflow-hidden border-y border-white/10">
+    <div class="bg-gray-900 text-[#F6F1E7] py-5 overflow-hidden border-y border-white/10">
         <div class="flex marquee-track whitespace-nowrap">
-            <div class="flex items-center gap-10 pr-10 text-sm uppercase tracking-[0.3em] font-light">
+            <div class="flex items-center gap-10 pr-10 text-sm uppercase tracking-[0.19em] font-light">
                 <span class="text-gold-400">✦ Original Watercolor Art</span>
                 <span>✦ Castle Rock, Colorado</span>
                 <span class="text-blush-300">✦ Visit The Emporium</span>
@@ -336,7 +347,7 @@
                 <span>✦ Shop Online</span>
                 <span class="text-gold-400">✦ Wholesale on Faire</span>
             </div>
-            <div class="flex items-center gap-10 pr-10 text-sm uppercase tracking-[0.3em] font-light" aria-hidden="true">
+            <div class="flex items-center gap-10 pr-10 text-sm uppercase tracking-[0.19em] font-light" aria-hidden="true">
                 <span class="text-gold-400">✦ Original Watercolor Art</span>
                 <span>✦ Castle Rock, Colorado</span>
                 <span class="text-blush-300">✦ Visit The Emporium</span>
@@ -349,7 +360,7 @@
     </div>
 
     <!-- ABOUT SECTION -->
-    <section id="about" class="py-24 md:py-32 bg-[#faf8f3] relative overflow-hidden">
+    <section id="about" class="py-24 md:py-32 bg-[#F6F1E7] relative overflow-hidden">
         <img src="assets/watercolor_green.png" alt=""
             class="absolute top-20 -right-20 w-[320px] opacity-30 pointer-events-none" style="transform: rotate(-20deg);">
 
@@ -365,7 +376,7 @@
                     </div>
                 </div>
                 <div class="w-full md:w-1/2 text-left">
-                    <p class="text-[11px] uppercase tracking-[0.35em] text-olive-700 font-bold mb-6">The Artist</p>
+                    <p class="text-[11px] uppercase tracking-[0.19em] text-gold-500 font-bold mb-6">The Artist</p>
                     <h2 class="text-5xl md:text-6xl text-gray-800 mb-8 leading-tight">Hello, <br> I'm <span
                             class="italic text-payne-700 hand-underline">Meredith.</span></h2>
                     <p class="text-gray-600 mb-6 leading-loose font-light text-lg">
@@ -386,10 +397,10 @@
                     </div>
                     <div class="flex flex-wrap gap-x-8 gap-y-4 mt-4">
                         <a href="our-story.html"
-                            class="inline-block text-xs uppercase font-bold tracking-[0.2em] border-b border-gold-400 pb-2 text-gold-600 hover:text-gold-700 hover:border-gold-700 transition">Read
+                            class="inline-block text-xs uppercase font-bold tracking-[0.19em] border-b border-gold-400 pb-2 text-gold-600 hover:text-gold-700 hover:border-gold-700 transition">Read
                             Our Story →</a>
                         <a href="#originals"
-                            class="inline-block text-xs uppercase font-bold tracking-[0.2em] border-b border-gray-300 pb-2 hover:text-payne-700 hover:border-payne-700 transition">See
+                            class="inline-block text-xs uppercase font-bold tracking-[0.19em] border-b border-gray-300 pb-2 hover:text-payne-700 hover:border-payne-700 transition">See
                             My Original Work →</a>
                     </div>
                 </div>
@@ -406,7 +417,7 @@
 
         <div class="container mx-auto px-6 relative z-10">
             <div class="reveal text-center mb-16 max-w-2xl mx-auto">
-                <p class="text-[11px] uppercase tracking-[0.35em] text-olive-700 font-bold mb-4">Only at The Emporium</p>
+                <p class="text-[11px] uppercase tracking-[0.19em] text-gold-500 font-bold mb-4">Only at The Emporium</p>
                 <h3 class="text-4xl md:text-5xl italic font-serif text-gray-800 mb-5">In-store exclusives</h3>
                 <div class="w-24 h-1 bg-gold-400 mx-auto rounded-full mb-6"></div>
                 <p class="text-gray-600 font-light leading-relaxed">
@@ -492,7 +503,7 @@
 
             <div class="text-center mt-14">
                 <a href="https://theemporiumcastlerock.com" target="_blank"
-                    class="inline-block bg-olive-700 hover:bg-olive-800 text-white px-10 py-4 text-xs uppercase tracking-[0.3em] font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+                    class="inline-block bg-olive-700 hover:bg-olive-800 text-white px-10 py-4 text-xs uppercase tracking-[0.19em] font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
                     Visit The Emporium →
                 </a>
             </div>
@@ -505,7 +516,7 @@
         <div class="container mx-auto px-6 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center max-w-5xl mx-auto">
                 <div class="reveal order-2 md:order-1">
-                    <span class="inline-block bg-olive-700 text-white text-[10px] uppercase tracking-[0.3em] px-4 py-2 font-bold rounded-full shadow-lg mb-6">Now Available</span>
+                    <span class="inline-block bg-olive-700 text-white text-[10px] uppercase tracking-[0.19em] px-4 py-2 font-bold rounded-full shadow-lg mb-6">Now Available</span>
                     <h3 class="text-4xl md:text-5xl italic font-serif text-gray-800 mb-5 leading-tight">The Juliette Watercolor Clutch</h3>
                     <div class="w-20 h-1 bg-gold-400 rounded-full mb-6"></div>
                     <p class="text-gray-600 font-light leading-relaxed mb-4">
@@ -518,12 +529,12 @@
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
                         <a href="https://shop.23treestudio.com" target="_blank"
-                            class="inline-flex items-center gap-3 bg-payne-800 hover:bg-payne-900 text-white px-8 py-4 text-xs uppercase tracking-[0.25em] font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group">
+                            class="inline-flex items-center gap-3 bg-payne-800 hover:bg-payne-900 text-white px-8 py-4 text-xs uppercase tracking-[0.19em] font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group">
                             Shop the Juliette
                             <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
                         </a>
                         <a href="https://www.faire.com/direct/23treestudio" target="_blank"
-                            class="inline-block text-xs uppercase tracking-[0.25em] font-bold text-gold-600 py-4 px-2 border-b-2 border-gold-200 hover:border-gold-600 transition">
+                            class="inline-block text-xs uppercase tracking-[0.19em] font-bold text-gold-600 py-4 px-2 border-b-2 border-gold-200 hover:border-gold-600 transition">
                             Wholesale on Faire
                         </a>
                     </div>
@@ -552,7 +563,7 @@
     </section>
 
     <!-- WHOLESALE / FAIRE DIRECT -->
-    <section id="wholesale" class="py-24 md:py-32 relative overflow-hidden bg-gradient-to-br from-gold-50 via-[#faf8f3] to-blush-50/60">
+    <section id="wholesale" class="py-24 md:py-32 relative overflow-hidden bg-gradient-to-br from-gold-50 via-[#F6F1E7] to-blush-50/60">
 
         <img src="assets/watercolor_rose.png" alt=""
             class="absolute -top-16 -left-24 w-[380px] opacity-35 pointer-events-none" style="transform: rotate(14deg);">
@@ -561,7 +572,7 @@
 
         <div class="container mx-auto px-6 max-w-6xl relative z-10">
             <div class="reveal text-center mb-16 max-w-2xl mx-auto">
-                <p class="text-[11px] uppercase tracking-[0.35em] text-gold-600 font-bold mb-4">For Retailers</p>
+                <p class="text-[11px] uppercase tracking-[0.19em] text-gold-600 font-bold mb-4">For Retailers</p>
                 <h2 class="text-4xl md:text-6xl italic font-serif text-gray-800 mb-5 leading-tight">Stock 23 Tree Studio</h2>
                 <div class="w-24 h-1 bg-gold-400 mx-auto rounded-full mb-6"></div>
                 <p class="text-gray-600 font-light leading-loose text-lg">
@@ -574,7 +585,7 @@
             <!-- Product photo strip -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mb-14 max-w-5xl mx-auto">
                 <div class="reveal overflow-hidden organic-corners shadow-md aspect-square relative">
-                    <span class="absolute top-3 left-3 z-10 bg-gold-600 text-white text-[10px] uppercase tracking-[0.2em] font-bold px-3 py-1.5 rounded-full shadow-lg">Preorder</span>
+                    <span class="absolute top-3 left-3 z-10 bg-gold-500 text-gray-900 text-[10px] uppercase tracking-[0.19em] font-bold px-3 py-1.5 rounded-full shadow-lg">Preorder</span>
                     <img src="assets/wildflower-clutch-front.jpg" alt="Wildflower-print watercolor clutch with paint set and brushes in the front pocket"
                         class="w-full h-full object-cover hover:scale-105 transition duration-700">
                 </div>
@@ -587,7 +598,7 @@
                         class="w-full h-full object-cover hover:scale-105 transition duration-700">
                 </div>
                 <div class="reveal reveal-delay-3 overflow-hidden organic-corners-reverse shadow-md aspect-square md:mt-8 relative">
-                    <span class="absolute top-3 left-3 z-10 bg-gold-600 text-white text-[10px] uppercase tracking-[0.2em] font-bold px-3 py-1.5 rounded-full shadow-lg">Preorder</span>
+                    <span class="absolute top-3 left-3 z-10 bg-gold-500 text-gray-900 text-[10px] uppercase tracking-[0.19em] font-bold px-3 py-1.5 rounded-full shadow-lg">Preorder</span>
                     <img src="assets/telluride-gift-set-hero.jpg" alt="Telluride gift set — navy box, plaid shimmer compact, and travel brush"
                         class="w-full h-full object-cover bg-white hover:scale-105 transition duration-700">
                 </div>
@@ -623,7 +634,7 @@
                         </ul>
                         <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
                             <a href="https://www.faire.com/direct/23treestudio" target="_blank"
-                                class="inline-flex items-center gap-3 bg-gold-600 hover:bg-gold-700 text-white text-[11px] uppercase tracking-[0.25em] font-bold py-5 px-10 rounded-full shadow-lg hover:shadow-xl transition duration-300 ease-out transform hover:-translate-y-1">
+                                class="inline-flex items-center gap-3 bg-gold-600 hover:bg-gold-600 text-white text-[11px] uppercase tracking-[0.19em] font-bold py-5 px-10 rounded-full shadow-lg hover:shadow-xl transition duration-300 ease-out transform hover:-translate-y-1">
                                 Open Our Faire Shop
                                 <span aria-hidden="true" class="text-base">→</span>
                             </a>
@@ -641,7 +652,7 @@
                     </div>
                     <div class="hidden md:block">
                         <div class="overflow-hidden organic-corners-reverse shadow-xl rotate-2 relative">
-                            <span class="absolute top-3 left-3 z-10 bg-gold-600 text-white text-[10px] uppercase tracking-[0.2em] font-bold px-3 py-1.5 rounded-full shadow-lg">Preorder</span>
+                            <span class="absolute top-3 left-3 z-10 bg-gold-500 text-gray-900 text-[10px] uppercase tracking-[0.19em] font-bold px-3 py-1.5 rounded-full shadow-lg">Preorder</span>
                             <img src="assets/wildflower-clutch-back.jpg" alt="Wildflower-print watercolor clutch with leather trim and wristlet strap"
                                 class="w-full h-full object-cover">
                         </div>
@@ -660,7 +671,7 @@
 
         <div class="container mx-auto px-6 relative z-10">
             <div class="reveal text-center mb-20">
-                <p class="text-[11px] uppercase tracking-[0.35em] text-olive-700 font-bold mb-4">Collections</p>
+                <p class="text-[11px] uppercase tracking-[0.19em] text-gold-500 font-bold mb-4">Collections</p>
                 <h3 class="text-4xl md:text-5xl italic font-serif text-gray-800 mb-5">Curated for your creativity</h3>
                 <div class="w-24 h-1 bg-blush-200 mx-auto rounded-full"></div>
             </div>
@@ -674,7 +685,7 @@
                             class="w-full h-full object-cover transition duration-700 group-hover:scale-105 group-hover:rotate-1">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
                         <div class="absolute bottom-6 left-6 right-6 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition duration-500">
-                            <span class="inline-block bg-white text-gray-900 text-[10px] uppercase tracking-widest px-4 py-2 font-bold rounded-full shadow-lg">Shop Paint Sets →</span>
+                            <span class="inline-block bg-white text-gray-900 text-[10px] uppercase tracking-[0.19em] px-4 py-2 font-bold rounded-full shadow-lg">Shop Paint Sets →</span>
                         </div>
                     </div>
                     <div class="text-center md:text-left">
@@ -691,7 +702,7 @@
                             class="w-full h-full object-cover transition duration-700 group-hover:scale-105 group-hover:-rotate-1">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
                         <div class="absolute bottom-6 left-6 right-6 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition duration-500">
-                            <span class="inline-block bg-white text-gray-900 text-[10px] uppercase tracking-widest px-4 py-2 font-bold rounded-full shadow-lg">Shop Brushes →</span>
+                            <span class="inline-block bg-white text-gray-900 text-[10px] uppercase tracking-[0.19em] px-4 py-2 font-bold rounded-full shadow-lg">Shop Brushes →</span>
                         </div>
                     </div>
                     <div class="text-center md:text-left">
@@ -708,11 +719,11 @@
                             class="w-full h-full object-cover transition duration-700 group-hover:scale-105 group-hover:rotate-1">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500"></div>
                         <div class="absolute bottom-6 left-6 right-6 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition duration-500">
-                            <span class="inline-block bg-olive-700 text-white text-[10px] uppercase tracking-widest px-4 py-2 font-bold rounded-full shadow-lg">Visit The Emporium →</span>
+                            <span class="inline-block bg-olive-700 text-white text-[10px] uppercase tracking-[0.19em] px-4 py-2 font-bold rounded-full shadow-lg">Visit The Emporium →</span>
                         </div>
                     </div>
                     <div class="text-center md:text-left">
-                        <h4 class="text-2xl text-gray-800 mb-2 italic group-hover:text-olive-700 transition">Visit In-Studio</h4>
+                        <h4 class="text-2xl text-gray-800 mb-2 italic group-hover:text-gold-500 transition">Visit In-Studio</h4>
                         <p class="text-gray-500 font-light leading-relaxed text-sm">An extensive selection of specialty watercolor supplies — from kids to professional — at The Emporium in downtown Castle Rock, Colorado.</p>
                     </div>
                 </a>
@@ -720,7 +731,7 @@
 
             <!-- Hand-swatched metallic color charts -->
             <div class="reveal text-center mt-24 mb-12">
-                <p class="text-[11px] uppercase tracking-[0.35em] text-payne-700 font-bold mb-4">Swatched Out</p>
+                <p class="text-[11px] uppercase tracking-[0.19em] text-payne-700 font-bold mb-4">Swatched Out</p>
                 <h3 class="text-3xl md:text-4xl italic font-serif text-gray-800 mb-5">The shimmer sets, painted out</h3>
                 <p class="text-gray-600 font-light leading-loose max-w-2xl mx-auto">
                     Every metallic shade in Ski Town Shimmer and the Telluride 25, hand-swatched so you can
@@ -741,7 +752,7 @@
     </section>
 
     <!-- SHOPIFY STORE CALLOUT -->
-    <section class="relative py-24 md:py-32 overflow-hidden bg-gradient-to-br from-blush-50 via-[#faf8f3] to-gold-50/50">
+    <section class="relative py-24 md:py-32 overflow-hidden bg-gradient-to-br from-blush-50 via-[#F6F1E7] to-gold-50/50">
 
         <!-- Decorative splashes -->
         <img src="assets/watercolor_rose.png" alt=""
@@ -763,7 +774,7 @@
                             packed with care in Castle Rock and sent straight to you.
                         </p>
                         <a href="https://shop.23treestudio.com" target="_blank"
-                            class="inline-flex items-center gap-3 bg-gray-900 text-white text-[11px] uppercase tracking-[0.25em] font-bold py-5 px-10 rounded-full hover:bg-payne-800 hover:shadow-2xl transition duration-300 ease-out transform hover:-translate-y-1">
+                            class="inline-flex items-center gap-3 bg-gray-900 text-white text-[11px] uppercase tracking-[0.19em] font-bold py-5 px-10 rounded-full hover:bg-payne-800 hover:shadow-2xl transition duration-300 ease-out transform hover:-translate-y-1">
                             Visit shop.23treestudio.com
                             <span aria-hidden="true" class="text-base">→</span>
                         </a>
@@ -772,23 +783,23 @@
                     <!-- Feature list -->
                     <div class="md:col-span-2 space-y-5">
                         <div class="flex items-start gap-4">
-                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blush-100 text-olive-700 flex items-center justify-center font-serif italic text-lg">✦</div>
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blush-100 text-gold-500 flex items-center justify-center font-serif italic text-lg">✦</div>
                             <div>
-                                <h5 class="text-sm uppercase tracking-widest font-bold text-gray-800 mb-1">Ships Nationwide</h5>
+                                <h5 class="text-sm uppercase tracking-[0.19em] font-bold text-gray-800 mb-1">Ships Nationwide</h5>
                                 <p class="text-sm text-gray-500 font-light leading-relaxed">Carefully packed in Castle Rock.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
                             <div class="flex-shrink-0 w-10 h-10 rounded-full bg-gold-100 text-gold-700 flex items-center justify-center font-serif italic text-lg">✦</div>
                             <div>
-                                <h5 class="text-sm uppercase tracking-widest font-bold text-gray-800 mb-1">Secure Checkout</h5>
+                                <h5 class="text-sm uppercase tracking-[0.19em] font-bold text-gray-800 mb-1">Secure Checkout</h5>
                                 <p class="text-sm text-gray-500 font-light leading-relaxed">Powered by Shopify.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4">
-                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-olive-100 text-olive-700 flex items-center justify-center font-serif italic text-lg">✦</div>
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-olive-100 text-gold-500 flex items-center justify-center font-serif italic text-lg">✦</div>
                             <div>
-                                <h5 class="text-sm uppercase tracking-widest font-bold text-gray-800 mb-1">Colorado-Inspired</h5>
+                                <h5 class="text-sm uppercase tracking-[0.19em] font-bold text-gray-800 mb-1">Colorado-Inspired</h5>
                                 <p class="text-sm text-gray-500 font-light leading-relaxed">Named for the landscapes we love.</p>
                             </div>
                         </div>
@@ -799,17 +810,17 @@
             <!-- New releases photo strip -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
                 <div class="reveal overflow-hidden organic-corners shadow-md aspect-square relative">
-                    <span class="absolute top-3 left-3 z-10 bg-gold-600 text-white text-[10px] uppercase tracking-[0.2em] font-bold px-3 py-1.5 rounded-full shadow-lg">Preorder</span>
+                    <span class="absolute top-3 left-3 z-10 bg-gold-500 text-gray-900 text-[10px] uppercase tracking-[0.19em] font-bold px-3 py-1.5 rounded-full shadow-lg">Preorder</span>
                     <img src="assets/ski-town-shimmer-case.jpg" alt="Ski Town Shimmer — 12 Colorado-inspired metallic watercolors in a travel case with hand-swatched color card"
                         class="w-full h-full object-cover hover:scale-105 transition duration-700">
                 </div>
                 <div class="reveal reveal-delay-1 overflow-hidden organic-corners-reverse shadow-md aspect-square md:mt-6 relative">
-                    <span class="absolute top-3 left-3 z-10 bg-gold-600 text-white text-[10px] uppercase tracking-[0.2em] font-bold px-3 py-1.5 rounded-full shadow-lg">Preorder</span>
+                    <span class="absolute top-3 left-3 z-10 bg-gold-500 text-gray-900 text-[10px] uppercase tracking-[0.19em] font-bold px-3 py-1.5 rounded-full shadow-lg">Preorder</span>
                     <img src="assets/telluride-gift-set-hero.jpg" alt="Telluride 25 shimmer gift set — navy box, plaid shimmer compact, and travel brush"
                         class="w-full h-full object-cover bg-white hover:scale-105 transition duration-700">
                 </div>
                 <div class="reveal reveal-delay-2 overflow-hidden organic-corners shadow-md aspect-square relative">
-                    <span class="absolute top-3 left-3 z-10 bg-gold-600 text-white text-[10px] uppercase tracking-[0.2em] font-bold px-3 py-1.5 rounded-full shadow-lg">Preorder</span>
+                    <span class="absolute top-3 left-3 z-10 bg-gold-500 text-gray-900 text-[10px] uppercase tracking-[0.19em] font-bold px-3 py-1.5 rounded-full shadow-lg">Preorder</span>
                     <img src="assets/ski-town-shimmer-pans.jpg" alt="Ski Town Shimmer — close-up of all 12 metallic watercolor pans in the open travel case"
                         class="w-full h-full object-cover hover:scale-105 transition duration-700">
                 </div>
@@ -824,7 +835,7 @@
 
         <div class="container mx-auto px-6 max-w-6xl relative z-10">
             <div class="reveal text-center mb-16">
-                <p class="text-[11px] uppercase tracking-[0.35em] text-payne-700 font-bold mb-4">Shop The Line</p>
+                <p class="text-[11px] uppercase tracking-[0.19em] text-payne-700 font-bold mb-4">Shop The Line</p>
                 <h3 class="text-4xl md:text-5xl italic font-serif text-gray-800 mb-5">Every 23 Tree Studio piece</h3>
                 <div class="w-24 h-1 bg-gold-400 mx-auto rounded-full mb-6"></div>
                 <p class="text-gray-600 font-light leading-loose max-w-2xl mx-auto">
@@ -882,7 +893,7 @@
 
                 <a href="https://shop.23treestudio.com/products/colorado-24" target="_blank" class="reveal reveal-delay-1 group">
                     <div class="overflow-hidden organic-corners shadow-md aspect-square relative mb-4">
-                        <span class="absolute top-3 left-3 z-10 bg-olive-700/95 text-white text-[10px] uppercase tracking-[0.2em] font-bold px-3 py-1.5 rounded-full shadow-lg">New</span>
+                        <span class="absolute top-3 left-3 z-10 bg-olive-700/95 text-white text-[10px] uppercase tracking-[0.19em] font-bold px-3 py-1.5 rounded-full shadow-lg">New</span>
                         <img src="assets/colorado-24-swatch-card.jpg" alt="The Colorado 24 hand-painted swatch card — all 24 named Colorado shades, from Sunflower Field to Gilded Aspen, beside the open tin"
                             class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
                     </div>
@@ -892,7 +903,7 @@
 
                 <a href="https://shop.23treestudio.com/products/telluride-25-color-metallic-shimmer-watercolor-gift-set" target="_blank" class="reveal reveal-delay-2 group">
                     <div class="overflow-hidden organic-corners-reverse shadow-md aspect-square relative mb-4">
-                        <span class="absolute top-3 left-3 z-10 bg-gold-600 text-white text-[10px] uppercase tracking-[0.2em] font-bold px-3 py-1.5 rounded-full shadow-lg">Preorder</span>
+                        <span class="absolute top-3 left-3 z-10 bg-gold-500 text-gray-900 text-[10px] uppercase tracking-[0.19em] font-bold px-3 py-1.5 rounded-full shadow-lg">Preorder</span>
                         <img src="assets/telluride-gift-set-hero.jpg" alt="Telluride gift set — navy box, plaid shimmer compact, and travel brush"
                             class="w-full h-full object-cover bg-white transition duration-700 group-hover:scale-105">
                     </div>
@@ -902,7 +913,7 @@
 
                 <a href="https://shop.23treestudio.com/products/juliette-wildflower-watercolor-clutch-and-workbook-organizer" target="_blank" class="reveal reveal-delay-3 group">
                     <div class="overflow-hidden organic-corners shadow-md aspect-square relative mb-4">
-                        <span class="absolute top-3 left-3 z-10 bg-gold-600 text-white text-[10px] uppercase tracking-[0.2em] font-bold px-3 py-1.5 rounded-full shadow-lg">Preorder</span>
+                        <span class="absolute top-3 left-3 z-10 bg-gold-500 text-gray-900 text-[10px] uppercase tracking-[0.19em] font-bold px-3 py-1.5 rounded-full shadow-lg">Preorder</span>
                         <img src="assets/wildflower-clutch-front.jpg" alt="Juliette Wildflower watercolor clutch"
                             class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
                     </div>
@@ -912,7 +923,7 @@
 
                 <a href="https://shop.23treestudio.com/products/size-6-black-gold-travel-watercolor-brush" target="_blank" class="reveal group">
                     <div class="overflow-hidden organic-corners-reverse shadow-md aspect-square relative mb-4">
-                        <span class="absolute top-3 left-3 z-10 bg-gold-600 text-white text-[10px] uppercase tracking-[0.2em] font-bold px-3 py-1.5 rounded-full shadow-lg">Preorder</span>
+                        <span class="absolute top-3 left-3 z-10 bg-gold-500 text-gray-900 text-[10px] uppercase tracking-[0.19em] font-bold px-3 py-1.5 rounded-full shadow-lg">Preorder</span>
                         <img src="https://cdn.faire.com/fastly/47f962749f20f2b8f8fbc71e93036d4d78cd05a5d92251342dc72cf28756a7ab.jpeg" alt="Size 6 black and gold travel watercolor brush"
                             class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
                     </div>
@@ -923,7 +934,7 @@
 
             <div class="reveal text-center mt-14">
                 <a href="https://shop.23treestudio.com" target="_blank"
-                    class="inline-flex items-center gap-3 bg-gray-900 text-white text-[11px] uppercase tracking-[0.25em] font-bold py-5 px-10 rounded-full hover:bg-payne-800 hover:shadow-2xl transition duration-300 ease-out transform hover:-translate-y-1">
+                    class="inline-flex items-center gap-3 bg-gray-900 text-white text-[11px] uppercase tracking-[0.19em] font-bold py-5 px-10 rounded-full hover:bg-payne-800 hover:shadow-2xl transition duration-300 ease-out transform hover:-translate-y-1">
                     Shop Everything Online
                     <span aria-hidden="true" class="text-base">→</span>
                 </a>
@@ -933,14 +944,14 @@
 
 
     <!-- ORIGINALS GALLERY -->
-    <section id="originals" class="py-24 md:py-32 relative overflow-hidden bg-gradient-to-b from-[#faf8f3] to-white">
+    <section id="originals" class="py-24 md:py-32 relative overflow-hidden bg-gradient-to-b from-[#F6F1E7] to-white">
 
         <img src="assets/watercolor_blue.png" alt=""
             class="absolute -top-10 -right-24 w-[360px] opacity-20 pointer-events-none" style="transform: rotate(12deg);">
 
         <div class="container mx-auto px-6 relative z-10">
             <div class="reveal text-center mb-16 max-w-2xl mx-auto">
-                <p class="text-[11px] uppercase tracking-[0.35em] text-payne-700 font-bold mb-4">Originals</p>
+                <p class="text-[11px] uppercase tracking-[0.19em] text-payne-700 font-bold mb-4">Originals</p>
                 <h3 class="text-4xl md:text-5xl italic font-serif text-gray-800 mb-5">Hand-painted in Castle Rock</h3>
                 <div class="w-24 h-1 bg-gold-400 mx-auto rounded-full mb-6"></div>
                 <p class="text-gray-600 font-light leading-relaxed">
@@ -967,7 +978,7 @@
             <div class="text-center mt-16">
                 <p class="text-sm text-gray-500 italic mb-5">Originals are not sold online — they live in the studio.</p>
                 <a href="https://theemporiumcastlerock.com" target="_blank"
-                    class="inline-block bg-payne-700 hover:bg-payne-800 text-white px-10 py-4 text-xs uppercase tracking-[0.3em] font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+                    class="inline-block bg-payne-700 hover:bg-payne-800 text-white px-10 py-4 text-xs uppercase tracking-[0.19em] font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
                     See Them At The Emporium →
                 </a>
             </div>
@@ -978,7 +989,7 @@
     <section id="connect" class="py-24 md:py-32 bg-white relative border-t border-blush-100/50">
         <div class="container mx-auto px-6 max-w-5xl">
             <div class="reveal text-center mb-16">
-                <p class="text-[11px] uppercase tracking-[0.35em] text-olive-700 font-bold mb-4">Connect</p>
+                <p class="text-[11px] uppercase tracking-[0.19em] text-gold-500 font-bold mb-4">Connect</p>
                 <h3 class="text-4xl md:text-5xl italic font-serif text-gray-800 mb-5">Join the Studio Community</h3>
                 <div class="w-16 h-0.5 bg-gray-200 mx-auto rounded-full mb-6"></div>
                 <p class="text-gray-500 font-light max-w-2xl mx-auto text-lg leading-loose">
@@ -990,7 +1001,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <!-- Instagram Card -->
                 <a href="https://instagram.com/23treestudio" target="_blank"
-                    class="group block bg-[#faf8f3] p-8 organic-corners shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-gray-100">
+                    class="group block bg-[#F6F1E7] p-8 organic-corners shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-gray-100">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-6">
                             <div
@@ -1005,7 +1016,7 @@
                                 <h5
                                     class="text-2xl font-serif italic text-gray-800 group-hover:text-payne-800 transition mb-1">
                                     Instagram</h5>
-                                <p class="text-xs uppercase tracking-widest text-gray-400 group-hover:text-payne-700/60">
+                                <p class="text-xs uppercase tracking-[0.19em] text-gray-400 group-hover:text-payne-700/60">
                                     @23treestudio</p>
                             </div>
                         </div>
@@ -1016,7 +1027,7 @@
 
                 <!-- Facebook Card -->
                 <a href="https://facebook.com/23Treestudio" target="_blank"
-                    class="group block bg-[#faf8f3] p-8 organic-corners-reverse shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-gray-100">
+                    class="group block bg-[#F6F1E7] p-8 organic-corners-reverse shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 border border-gray-100">
                     <div class="flex items-center justify-between">
                         <div class="flex items-center gap-6">
                             <div
@@ -1031,7 +1042,7 @@
                                 <h5
                                     class="text-2xl font-serif italic text-gray-800 group-hover:text-blue-900 transition mb-1">
                                     Facebook</h5>
-                                <p class="text-xs uppercase tracking-widest text-gray-400 group-hover:text-blue-800/60">
+                                <p class="text-xs uppercase tracking-[0.19em] text-gray-400 group-hover:text-blue-800/60">
                                     /23Treestudio</p>
                             </div>
                         </div>
@@ -1045,7 +1056,7 @@
     </section>
 
     <!-- VISIT / FOOTER -->
-    <section id="visit" class="bg-[#2a2a2a] text-gray-300 py-24 relative overflow-hidden">
+    <section id="visit" class="bg-[#162C45] text-gray-300 py-24 relative overflow-hidden">
         <div
             class="absolute top-0 left-0 w-full h-full opacity-5 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
         </div>
@@ -1065,18 +1076,18 @@
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
                         <div>
-                            <h6 class="text-[10px] uppercase font-bold tracking-[0.2em] text-gray-500 mb-4">Address</h6>
+                            <h6 class="text-[10px] uppercase font-bold tracking-[0.19em] text-gold-500 mb-4">Address</h6>
                             <p class="text-gray-300 font-light leading-relaxed">200 Perry St<br>Castle Rock, CO 80104
                             </p>
                         </div>
                         <div>
-                            <h6 class="text-[10px] uppercase font-bold tracking-[0.2em] text-gray-500 mb-4">Hours</h6>
+                            <h6 class="text-[10px] uppercase font-bold tracking-[0.19em] text-gold-500 mb-4">Hours</h6>
                             <p class="text-gray-300 font-light leading-relaxed">Daily<br>10am - 6pm</p>
                         </div>
                     </div>
 
                     <div class="mb-10">
-                        <h6 class="text-[10px] uppercase font-bold tracking-[0.2em] text-gray-500 mb-4">Contact</h6>
+                        <h6 class="text-[10px] uppercase font-bold tracking-[0.19em] text-gold-500 mb-4">Contact</h6>
                         <p class="text-gray-300 font-light leading-relaxed">
                             meredith@23treestudio.com
                         </p>
@@ -1089,12 +1100,12 @@
 
                     <div class="flex flex-wrap gap-4">
                         <a href="https://www.faire.com/direct/23treestudio" target="_blank"
-                            class="inline-flex items-center gap-3 bg-gold-500 text-white text-[11px] uppercase tracking-[0.25em] font-bold py-4 px-8 rounded-full hover:bg-gold-600 transition duration-300">
+                            class="inline-flex items-center gap-3 bg-gold-500 text-gray-900 text-[11px] uppercase tracking-[0.19em] font-bold py-4 px-8 rounded-full hover:bg-gold-600 transition duration-300">
                             Wholesale on Faire
                             <span aria-hidden="true">→</span>
                         </a>
                         <a href="https://shop.23treestudio.com" target="_blank"
-                            class="inline-flex items-center gap-3 bg-white text-gray-900 text-[11px] uppercase tracking-[0.25em] font-bold py-4 px-8 rounded-full hover:bg-blush-100 transition duration-300">
+                            class="inline-flex items-center gap-3 bg-white text-gray-900 text-[11px] uppercase tracking-[0.19em] font-bold py-4 px-8 rounded-full hover:bg-blush-100 transition duration-300">
                             Shop Online
                             <span aria-hidden="true">→</span>
                         </a>
@@ -1103,21 +1114,21 @@
 
                 <!-- Contact Form Column -->
                 <div id="contact" class="w-full md:w-1/2">
-                    <div class="bg-[#333] p-10 rounded-[2rem] shadow-2xl border border-white/5">
+                    <div class="bg-[#1E3A5A] p-10 rounded-[2rem] shadow-2xl border border-white/5">
                         <h3 class="text-2xl mb-8 font-light text-white">Send a Note</h3>
                         <!-- Formspree: replace YOUR_FORM_ID below with the ID from your Formspree dashboard -->
                         <form action="https://formspree.io/f/xpqkolqy" method="POST" class="space-y-6">
                             <input type="text" name="name" placeholder="Name" required
-                                class="w-full bg-[#2a2a2a] border border-gray-700 text-white px-6 py-4 rounded-lg placeholder-gray-500 focus:ring-1 focus:ring-gray-400 outline-none transition">
+                                class="w-full bg-[#162C45] border border-gray-700 text-white px-6 py-4 rounded-lg placeholder-gray-500 focus:ring-1 focus:ring-gray-400 outline-none transition">
                             <input type="email" name="email" placeholder="Email" required
-                                class="w-full bg-[#2a2a2a] border border-gray-700 text-white px-6 py-4 rounded-lg placeholder-gray-500 focus:ring-1 focus:ring-gray-400 outline-none transition">
+                                class="w-full bg-[#162C45] border border-gray-700 text-white px-6 py-4 rounded-lg placeholder-gray-500 focus:ring-1 focus:ring-gray-400 outline-none transition">
                             <textarea name="message" rows="4" placeholder="Message" required
-                                class="w-full bg-[#2a2a2a] border border-gray-700 text-white px-6 py-4 rounded-lg placeholder-gray-500 focus:ring-1 focus:ring-gray-400 outline-none transition"></textarea>
+                                class="w-full bg-[#162C45] border border-gray-700 text-white px-6 py-4 rounded-lg placeholder-gray-500 focus:ring-1 focus:ring-gray-400 outline-none transition"></textarea>
                             <input type="hidden" name="_subject" value="New message from 23treestudio.com">
                             <!-- Honeypot for spam bots -->
                             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
                             <button type="submit"
-                                class="w-full bg-white text-black uppercase text-xs font-bold tracking-[0.2em] py-4 px-8 rounded-lg hover:bg-gray-200 transition duration-300">Send
+                                class="w-full bg-white text-black uppercase text-xs font-bold tracking-[0.19em] py-4 px-8 rounded-lg hover:bg-gray-200 transition duration-300">Send
                                 Message</button>
                         </form>
                     </div>
@@ -1125,7 +1136,7 @@
             </div>
 
             <div
-                class="mt-24 pt-8 border-t border-gray-800 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 font-medium tracking-wide">
+                class="mt-24 pt-8 border-t border-gray-800 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 font-medium tracking-wide">
                 <p>&copy; 2026 23 Tree Studio. All rights reserved.</p>
                 <div class="flex space-x-6 mt-6 md:mt-0">
                     <a href="our-story.html" class="hover:text-white transition">Our Story</a>

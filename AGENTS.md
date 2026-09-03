@@ -2,6 +2,7 @@
 
 ## Project Structure & Module Organization
 - `index.html` is the home page: markup, Tailwind configuration, and custom CSS live here.
+- Brand standards apply site-wide: gold `#D09F4F`, navy `#162C45`, cream `#F6F1E7`; wordmarks in Cormorant Garamond Italic SemiBold (gold); small caps and labels in Montserrat Bold with `tracking-[0.19em]`; body in Montserrat. The Tailwind `payne`, `blush`, `olive`, `gold`, and `gray` scales in `index.html` are tints and shades of those three colors, so existing utility classes stay on brand. Never re-typeset the 23|T logo; place the official vector only.
 - `our-story.html` is the About / Our Story page. It follows the brand standards (gold `#D09F4F`, navy `#162C45`, cream `#F6F1E7`; Cormorant Garamond Italic SemiBold wordmarks; Montserrat Bold labels at 0.19em tracking). Photo slots are left as commented `PHOTO NEEDED` blocks until brand photography exists.
 - `_redirects` maps `/our-story` and `/about` to `our-story.html` on Netlify.
 - `docs/shopify-brand-copy.md` holds the paste-ready Shopify brand blurb and Juliette story line (Shopify is a separate property, not edited from this repo).
