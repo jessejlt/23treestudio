@@ -1,7 +1,10 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-- `index.html` is the entire site: markup, Tailwind configuration, and custom CSS live here.
+- `index.html` is the home page: markup, Tailwind configuration, and custom CSS live here.
+- `our-story.html` is the About / Our Story page. It follows the brand standards (gold `#D09F4F`, navy `#162C45`, cream `#F6F1E7`; Cormorant Garamond Italic SemiBold wordmarks; Montserrat Bold labels at 0.19em tracking). Photo slots are left as commented `PHOTO NEEDED` blocks until brand photography exists.
+- `_redirects` maps `/our-story` and `/about` to `our-story.html` on Netlify.
+- `docs/shopify-brand-copy.md` holds the paste-ready Shopify brand blurb and Juliette story line (Shopify is a separate property, not edited from this repo).
 - `README.md` contains hosting notes (Squarespace domain, Netlify hosting).
 - There are no separate source, build, or asset directories; images and fonts are pulled from CDNs.
 
