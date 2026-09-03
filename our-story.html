@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | 23 Tree Studio — Castle Rock, Colorado</title>
+    <meta name="description"
+        content="How 23 Tree Studio began: raw canvas abstracts, saved velvets, a pearl pin and 23 karat gold, tiny Colorado landscapes, and the watercolor supplies that followed. Castle Rock, Colorado.">
+    <link rel="canonical" href="https://23treestudio.com/our-story.html">
+    <meta property="og:title" content="Our Story | 23 Tree Studio">
+    <meta property="og:description" content="23 karat, and a single tree. The story behind 23 Tree Studio, a watercolor art supply and lifestyle boutique in Castle Rock, Colorado.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://23treestudio.com/our-story.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        /* Brand standards — do not alter */
+                        brand: {
+                            gold: '#D09F4F',
+                            navy: '#162C45',
+                            cream: '#F6F1E7',
+                        },
+                    },
+                    fontFamily: {
+                        wordmark: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        label: ['Montserrat', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        label: '0.19em',
+                    },
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-weight: 500;
+            color: #162C45;
+            background-color: #F6F1E7;
+        }
+
+        /* Wordmark: Cormorant Garamond Italic SemiBold, gold */
+        .wordmark {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-style: italic;
+            font-weight: 600;
+            color: #D09F4F;
+        }
+
+        /* Small caps / labels: Montserrat Bold, letterspaced 0.19em */
+        .label {
+            font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.19em;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-weight: 500;
+        }
+
+        .story p:not(.wordmark) {
+            font-size: 1.3rem;
+            line-height: 1.75;
+        }
+
+        @media (min-width: 768px) {
+            .story p:not(.wordmark) {
+                font-size: 1.45rem;
+            }
+        }
+
+        .story p + p {
+            margin-top: 1.5rem;
+        }
+
+        /* Drop cap on the opening paragraph */
+        .drop-cap::first-letter {
+            font-style: italic;
+            font-weight: 600;
+            color: #D09F4F;
+            font-size: 4.2em;
+            line-height: 0.78;
+            float: left;
+            padding-right: 0.12em;
+            padding-top: 0.08em;
+        }
+
+        .gold-rule {
+            width: 3.5rem;
+            height: 1px;
+            background: #D09F4F;
+        }
+
+        /* Subtle paper grain, matching the home page */
+        .paper-grain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.25;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.06'/%3E%3C/svg%3E");
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1; transform: none; transition: none; }
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-brand-gold/30 selection:text-brand-navy overflow-x-hidden">
+
+    <div class="paper-grain"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="sticky top-0 z-50 bg-brand-cream/95 backdrop-blur-sm border-b border-brand-navy/10">
+        <div class="container mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-4">
+            <!--
+                LOGO: place the official 23|T vector here (23TreeStudio_Logo_Gold_VECTOR.pdf, exported
+                unmodified). The file was not available when this page was built, so the text wordmark
+                stands in. Never re-typeset or approximate the mark.
+            -->
+            <a href="index.html" class="wordmark text-3xl tracking-wide hover:opacity-80 transition" aria-label="23 Tree Studio home">
+                23 Tree Studio
+            </a>
+            <div class="label flex flex-wrap justify-center items-center gap-x-8 gap-y-2 text-[11px] text-brand-navy/60">
+                <a href="index.html" class="hover:text-brand-navy transition duration-300">Home</a>
+                <a href="index.html#originals" class="hover:text-brand-navy transition duration-300">Originals</a>
+                <a href="index.html#visit" class="hover:text-brand-navy transition duration-300">Visit</a>
+                <a href="https://shop.23treestudio.com" target="_blank" rel="noopener" class="hover:text-brand-navy transition duration-300">Shop Retail</a>
+                <a href="https://www.faire.com/direct/23treestudio" target="_blank" rel="noopener"
+                    class="inline-flex items-center gap-2 bg-brand-gold text-white px-4 py-2 rounded-full hover:bg-brand-navy transition duration-300">
+                    Wholesale on Faire
+                    <span aria-hidden="true">→</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="relative overflow-hidden pt-20 pb-16 md:pt-32 md:pb-24">
+        <img src="assets/watercolor_rose.png" alt=""
+            class="absolute -top-16 -left-24 w-[420px] opacity-40 pointer-events-none" style="transform: rotate(-12deg);">
+        <img src="assets/watercolor_blue.png" alt=""
+            class="absolute top-1/4 -right-28 w-[380px] opacity-30 pointer-events-none hidden md:block" style="transform: rotate(18deg);">
+
+        <div class="container mx-auto px-6 max-w-3xl relative z-10 text-center">
+            <p class="label text-[11px] text-brand-gold mb-8">Our Story &nbsp;·&nbsp; Castle Rock, Colorado</p>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl leading-[1.02] tracking-tight text-brand-navy mb-8">
+                23 karat, and <span class="wordmark">a single tree.</span>
+            </h1>
+            <div class="gold-rule mx-auto mb-8"></div>
+            <p class="text-2xl md:text-3xl italic text-brand-navy/80 leading-snug">
+                The gold is my signature. This is how it got there, and how a few tiny paintings became a studio.
+            </p>
+        </div>
+    </header>
+
+    <!-- STORY -->
+    <main class="story relative z-10">
+
+        <!-- IT BEGAN WITH RAW CANVAS -->
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-6 max-w-3xl reveal">
+                <p class="label text-[11px] text-brand-gold mb-4">It began with raw canvas</p>
+                <h2 class="text-4xl md:text-5xl leading-tight mb-8">A long stretch of not making anything.</h2>
+                <p class="drop-cap">
+                    After years away from it, I came back to painting. Large abstracts, on oversized raw canvas I
+                    stretched by hand. It was loose, physical work, and it left scraps everywhere.
+                </p>
+                <!--
+                    PHOTO NEEDED: an oversized raw canvas abstract (brand photography, not a product shot).
+                    Uncomment once the file exists and set src.
+                <figure class="mt-12">
+                    <img src="assets/story-raw-canvas-abstract.jpg" alt="An oversized abstract painting on hand-stretched raw canvas" class="w-full rounded-[1.5rem] shadow-lg">
+                </figure>
+                -->
+            </div>
+        </section>
+
+        <!-- WHAT I HAD SAVED -->
+        <section class="py-16 md:py-24 bg-white/60">
+            <div class="container mx-auto px-6 max-w-3xl reveal">
+                <p class="label text-[11px] text-brand-gold mb-4">What I had saved</p>
+                <h2 class="text-4xl md:text-5xl leading-tight mb-8">Velvets, a pearl pin, and 23 karat gold.</h2>
+                <p>
+                    The scraps stayed on the table. And I kept thinking about the upholstery swatches I had held onto
+                    for years — velvets and wools too beautiful to throw away, saved for something I could not yet
+                    name.
+                </p>
+                <p>
+                    So I painted on the canvas scraps and mounted each one to a fabric square with a pearl-topped pin
+                    and 23 karat gold leaf. The pin and the gold were the jewelry. I sold them at art fairs first,
+                    then from a small gallery-style wall inside a storefront.
+                </p>
+                <p>
+                    Over time the paintings turned into tiny Colorado landscapes, and the landscapes began as single
+                    trees. That is where the name comes from: 23 karat, and a tree.
+                </p>
+                <!--
+                    PHOTO NEEDED: the tiny gold-leaf landscapes on hand-dyed wool.
+                    Uncomment once the file exists and set src.
+                <figure class="mt-12">
+                    <img src="assets/story-tiny-landscapes-wool.jpg" alt="Tiny Colorado landscapes finished with 23 karat gold leaf, pinned to hand-dyed wool" class="w-full rounded-[1.5rem] shadow-lg">
+                </figure>
+                -->
+            </div>
+        </section>
+
+        <!-- PULL QUOTE -->
+        <section class="py-20 md:py-28 bg-brand-navy text-brand-cream relative overflow-hidden">
+            <img src="assets/watercolor_green.png" alt=""
+                class="absolute -bottom-20 -right-20 w-[360px] opacity-20 pointer-events-none" style="transform: rotate(-20deg);">
+            <div class="container mx-auto px-6 max-w-3xl text-center reveal relative z-10">
+                <p class="wordmark text-4xl md:text-6xl leading-tight">Twenty-three karat, and a tree.</p>
+                <div class="gold-rule mx-auto mt-8"></div>
+            </div>
+        </section>
+
+        <!-- THEN PEOPLE ASKED FOR A CLASS -->
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-6 max-w-3xl reveal">
+                <p class="label text-[11px] text-brand-gold mb-4">Then people asked for a class</p>
+                <h2 class="text-4xl md:text-5xl leading-tight mb-8">Lessons in a gift box.</h2>
+                <p>
+                    I had an infant and a young child at home, so teaching was not possible. Instead I made gift-set
+                    lessons for the holidays: pen-and-ink feathers on watercolor paper, a mini handmade watercolor
+                    set, and a lesson to follow.
+                </p>
+                <p>
+                    They sold faster than I could draw them, and they pulled me away from painting.
+                </p>
+            </div>
+        </section>
+
+        <!-- THE SUPPLIES SHOULD BE BEAUTIFUL TOO -->
+        <section class="py-16 md:py-24 bg-white/60">
+            <div class="container mx-auto px-6 max-w-3xl reveal">
+                <p class="label text-[11px] text-brand-gold mb-4">The supplies should be beautiful too</p>
+                <h2 class="text-4xl md:text-5xl leading-tight mb-8">What was missing from the shelf.</h2>
+                <p>
+                    That is how I found watercolor workbooks, back when they were only just being discovered. I began
+                    stocking them in the shop — other makers' books, not mine — and noticed what was missing. I
+                    wanted beautiful supplies and accessories to sit alongside them. Things worth reaching for.
+                </p>
+                <p>
+                    That is the brand. The gold stayed: it is why the logo is gold, why metallics run through the
+                    packaging, and why the Colorado 24 carries a metallic gold pan and the rest of the glitz. I think
+                    of the metallics as the jewelry for the art.
+                </p>
+            </div>
+        </section>
+
+        <!-- THE STUDIO -->
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-6 max-w-3xl reveal">
+                <p class="label text-[11px] text-brand-gold mb-4">The studio</p>
+                <h2 class="text-4xl md:text-5xl leading-tight mb-8">A shop, and a bench.</h2>
+                <p>
+                    23 Tree Studio is a watercolor art supply and lifestyle boutique in Castle Rock, Colorado, founded
+                    in 2023. We keep a shop at
+                    <a href="https://theemporiumcastlerock.com" target="_blank" rel="noopener" class="italic border-b border-brand-gold hover:text-brand-gold transition">The Emporium</a>
+                    in downtown Castle Rock, selling our own paint sets, brushes, and the Juliette alongside a curated
+                    selection of other watercolor brands.
+                </p>
+                <p>
+                    Running a shop shapes what we make. We watch which supplies people pick up, which ones they put
+                    back, and what they come back for — and we design accordingly.
+                </p>
+                <!--
+                    PHOTO NEEDED: the shop at The Emporium (brand photography, not the existing retail shelf shots).
+                    Uncomment once the file exists and set src.
+                <figure class="mt-12">
+                    <img src="assets/story-shop-emporium.jpg" alt="The 23 Tree Studio shop inside The Emporium, downtown Castle Rock" class="w-full rounded-[1.5rem] shadow-lg">
+                </figure>
+                -->
+            </div>
+        </section>
+
+        <!-- THE NAMES -->
+        <section class="py-16 md:py-24 bg-white/60">
+            <div class="container mx-auto px-6 max-w-3xl reveal">
+                <p class="label text-[11px] text-brand-gold mb-4">The names</p>
+                <h2 class="text-4xl md:text-5xl leading-tight mb-8">Two of them are my children.</h2>
+                <p>
+                    The Juliette is named for my daughter, who loves to dress up; the gingham came from her. The
+                    Kaden Traveler is named for my son, who is endlessly curious about the world — as I was, before
+                    he arrived. I spent those years travelling the world on my own time, while working as a travel
+                    nurse.
+                </p>
+                <p>
+                    The rest of the line shares a sense of place: the Colorado 24, Aspen Grove, Telluride, Ski Town
+                    Shimmer, the Studio Essential brushes. The names are not decoration. They are where we are from.
+                </p>
+            </div>
+        </section>
+
+        <!-- FOUNDER NOTE -->
+        <section class="py-20 md:py-32 relative overflow-hidden">
+            <img src="assets/watercolor_rose.png" alt=""
+                class="absolute -bottom-24 -left-24 w-[380px] opacity-30 pointer-events-none" style="transform: rotate(10deg);">
+            <div class="container mx-auto px-6 max-w-3xl relative z-10 reveal">
+                <div class="border border-brand-gold/60 rounded-[2rem] p-10 md:p-16 bg-brand-cream">
+                    <p class="label text-[11px] text-brand-gold mb-8">Meredith Thompson &nbsp;·&nbsp; Founder</p>
+                    <p>
+                        23 Tree Studio is a one-person operation. I design the products, work directly with the makers
+                        who produce them, write the specifications, run the shop and take the photographs. The work is
+                        small on purpose — it is how the details stay right.
+                    </p>
+                    <p>
+                        I am still painting. The original tiny Colorado landscapes continue — adorned with 23 karat
+                        gold, pinned to hand-dyed wools. They are made in small batches and sold only at the shop,
+                        never online.
+                    </p>
+                    <p class="wordmark text-3xl md:text-4xl mt-10">Meredith</p>
+                    <!--
+                        PHOTO NEEDED: Meredith at work (painting or at the bench).
+                        Uncomment once the file exists and set src.
+                    <figure class="mt-12">
+                        <img src="assets/story-meredith-working.jpg" alt="Meredith Thompson painting at the studio bench" class="w-full rounded-[1.5rem] shadow-lg">
+                    </figure>
+                    -->
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-14">
+                    <a href="index.html#visit"
+                        class="label inline-flex items-center gap-3 bg-brand-navy text-white text-[11px] py-5 px-10 rounded-full hover:bg-brand-gold transition duration-300">
+                        Visit the Studio
+                        <span aria-hidden="true">→</span>
+                    </a>
+                    <a href="https://shop.23treestudio.com" target="_blank" rel="noopener"
+                        class="label inline-block text-[11px] text-brand-navy py-5 px-4 border-b-2 border-brand-gold hover:text-brand-gold transition">
+                        Shop Online
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-navy text-brand-cream py-16">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="text-center md:text-left">
+                    <p class="wordmark text-3xl mb-3">23 Tree Studio</p>
+                    <p class="text-lg text-brand-cream/70">23 Tree Studio Ltd. &nbsp;·&nbsp; Castle Rock, Colorado</p>
+                    <a href="mailto:meredith@23treestudio.com" class="text-lg text-brand-cream/70 hover:text-brand-gold transition">meredith@23treestudio.com</a>
+                </div>
+                <div class="label flex flex-wrap justify-center gap-x-8 gap-y-3 text-[11px] text-brand-cream/60">
+                    <a href="index.html" class="hover:text-brand-gold transition">Home</a>
+                    <a href="https://shop.23treestudio.com" target="_blank" rel="noopener" class="hover:text-brand-gold transition">Shop</a>
+                    <a href="https://www.faire.com/direct/23treestudio" target="_blank" rel="noopener" class="hover:text-brand-gold transition">Wholesale</a>
+                    <a href="https://instagram.com/23treestudio" target="_blank" rel="noopener" class="hover:text-brand-gold transition">Instagram</a>
+                    <a href="https://facebook.com/23Treestudio" target="_blank" rel="noopener" class="hover:text-brand-gold transition">Facebook</a>
+                </div>
+            </div>
+            <p class="mt-12 pt-8 border-t border-brand-cream/10 text-center md:text-left text-sm text-brand-cream/40">
+                &copy; 2026 23 Tree Studio. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+
+</body>
+
+</html>
