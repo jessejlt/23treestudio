@@ -45,7 +45,7 @@ Add as the first short paragraph of the description on
 > The Juliette is named for my daughter, who loves to dress up, and it came from wanting
 > beautiful supplies to travel alongside the watercolor workbooks I stock in the shop.
 
-**Where to place it:** Products → The Juliette Watercolor Wristlet → Description. Keep the
+**Where to place it:** Products → Juliette Watercolor Clutch & Analog Organizer → Description. Keep the
 existing feature copy (padded book-sleeve construction, pockets, zip-around closure, wrist
 strap, approx. 12 × 8 in.) below it.
 
